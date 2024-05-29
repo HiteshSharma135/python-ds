@@ -73,6 +73,13 @@ print('delhi'*5)
 
 #Relational Operator (every relational operator works on strings)
 
-print('delhi'>'mumbai')#it will just compare the strings and give the answer in boolen values
+print('delhi'=='delhi')
 
-#hey 
+print('delhi'>'mumbai')#it will just compare the strings and give the answer in boolen values but the answer would be with the help of lexiographically(that means comparision will be done on the  basis of the ASCII values)
+
+print('delhi'!='delhi')
+
+
+
+#Logical Operator 
+
