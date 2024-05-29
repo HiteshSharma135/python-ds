@@ -74,3 +74,5 @@ print('delhi'*5)
 #Relational Operator (every relational operator works on strings)
 
 print('delhi'>'mumbai')#it will just compare the strings and give the answer in boolen values
+
+#hey 
