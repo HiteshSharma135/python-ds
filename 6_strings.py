@@ -82,4 +82,30 @@ print('delhi'!='delhi')
 
 
 #Logical Operator 
+# in case of logical operators ,, ''(empty string) will be taken as false and 'xyz'(string having characters ) will be taken as true 
+
+print(''or 'world')#0 or 1=> 1 that means output will be world
+print(''and 'world')#0 and 1=>0 that means output will be (empty string)
+print('hello'or'world')#1 or 1=>1 but as it sees that first is 1 it gives output as hello as if 1st is true in or expression then expr. would be true
+print('hello'and'world')#1 and 1=>1 but to evaluate it needs to go to second string also that's why it gives true output as world
+print(not'')#output of not of empyt(false) would be true
+
+
+#loops in strings
+#string are iterative in loops as we can iterate to each characters of string
+for i in 'delhi':
+    print(i)
+
+
+for i in 'delhi':
+    print('pune')
+
+#in this case output would be 5times pune as loop iterate 5 times on the characters on delhi
+
+
+#Membership operators
+#it is case senstive 
+print('d' in 'delhi')#it will be boolean values
+print('D'in 'delhi')
+print('n'not in 'Newdelhi') 
 
