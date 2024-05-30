@@ -85,3 +85,7 @@ L1=L.copy()
 print(L1)
 print(id(L1))
 #just see the address of both the L1 and L after copy as they are different
+
+
+
+##LIST COMPREHENSION
