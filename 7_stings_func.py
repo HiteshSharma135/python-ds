@@ -74,4 +74,94 @@ print(s.startswith('i'))
 
 
 #Format
-#
+#with the help of format function we can insert the value of variable in a given string
+
+name='hitesh'
+gender='male'
+print('my name is {} and my gender is {}'.format(name,gender))
+#in this order matters of variable
+
+print('my name is {1} and my gender is {0}'.format(gender,name))
+#we can decide the positioning in it by providing the order number in it 
+
+
+
+#####NOTE :- there may be doubt that as we know that string is immutable so how can we run these function on strings as it change the initial string so answer is that ... it doesnot changes the original string it makes the copy of original string and make changes in it and the original string remains same.. see example
+
+s='india'
+print(s.capitalize())
+print(s)
+#with the above example we can see that there is no change in the original string
+
+#isalnum 
+#this function is used to check whether the given string contains the alpha numerics or not
+#it provides output in boolean format
+s='hitesh1234'
+print(s.isalnum())
+
+
+#isalpha
+#this function is used to check whether the given string contains the alphabets or not
+#it provides output in boolean format
+
+a='hitsh11'
+print(a.isalpha())
+
+#isdigit
+#this function is used to check whether the given string contains the digits or not
+#it provides output in boolean format
+
+num='1234'
+print(num.isdigit())
+
+#isidentifier
+#this function is used to check whether the given string is following the rules of identifier or not
+#it provides output in boolean format
+
+i='name1'
+print(i.isidentifier())
+
+
+###some important functions
+
+#split
+#this function just break the strings word by word and added to the python list
+
+str='hey my name is hitesh'
+print(str.split())
+
+#we can also split the string into particular word .. for ex
+print(str.split('is'))
+#break the sentence on the bais of "is " word 
+
+
+#Join 
+#it is opposite of split function as it joins the words to make a string
+
+print(" ".join(['hey', 'my', 'name', 'is', 'hitesh']))
+#here joining of string is based on the space
+print("-".join(['hey', 'my', 'name', 'is', 'hitesh']))
+#here joining of string is based on the - character
+
+
+#Replace
+#this function is used to replace a particular word with the other word
+#it just find that particular word that is to be replace and replace that word
+rep='hy name is india'
+print(rep.replace('india','hitesh'))
+
+
+#Strip 
+#this function is used to remove the spaces from the string from starting and ending of string
+#it can also be used to remove the unwanted characters from the string this also in same manner starting or ending characters
+
+name='hitsh sharma    '
+print(name.strip())
+
+name1=",,,,,,,,,,,ggggggggggggg sharma"
+new=name1.strip(" ,g")
+print(new)
+
+
+
+
