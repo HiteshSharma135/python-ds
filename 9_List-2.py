@@ -88,4 +88,50 @@ print(id(L1))
 
 
 
-##LIST COMPREHENSION
+###LIST COMPREHENSION
+
+
+
+
+
+
+
+
+
+###Two ways to traverse a list
+
+##itemwise
+#it will just traverse a list using its item
+L=[1,2,3,4,5]
+for i in L:
+    print(L)
+
+##indexwise
+#it will traverse the list using its index
+L=[1,2,3,4,5]
+for i in range(0,len(L)):
+    print(L[i])
+
+###ZIP function
+#Zip function returns a zip object,which is an  iterator of tuples where the first item in each passed iterator is paired together,and then the second item in each passed iterator are paired together.
+#if the passed  iterators have different lengths, the iterator with the least items decides the length of new iterator.
+
+L1=[1,2,3,4]
+L2=[-1,-2,-3,-4]
+print(list(zip(L1,L2)))
+
+new=[i+j for i,j in zip(L1,L2)]
+print(new)
+
+###Python can store any type of objects in list
+
+L=[1,2,print,type,input]
+print(L)
+
+
+
+
+##DISADVANTAGE OF PYTHON LIST
+#SLOW
+#RISKY USAGE
+#EATS UP MORE MEMORY
