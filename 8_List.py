@@ -123,7 +123,7 @@ print(L[::-1])#to reverse the list
 
 
 
-###ADDING ITESM TO LIST
+###ADDING ITEMS TO LIST
 
 ##Apend
 #if we want to add a single item at the end of list ,, in that case we use append
@@ -167,12 +167,55 @@ print(L)
 ###DELETING ITEMS IN A LIST
 
 ##del
+L=[1,2,3,4,5]
+print(L)
+del L
+#print(L)#it will now show error as list is deleted now
+
+L=[1,2,3,4,5]
+#to delete any particular item
+#using indexing
+del L[-1]#to delete last item
+
+#using slicing
+del L[1:3]
+print(L)
 
 ##remove
+#to remove/ delete any particular item or number without knowing its indexing
+#in this index position is not required just delete the particular  number
+L=[1,2,3,4,5,6]
+L.remove(5)
+print(L)
+
 
 ##pop
+#if we donot pass the index in pop func it remove the last item of list as it behaviour
+
+L=[1,2,3,8,9]
+L.pop()#it will remove the last item in list
+print(L)
+
+L.pop(1)#it will remove the item at index value 1
+print(L)
+
 
 ##clear
+#to clear every item from the list it is used
+#it makes the list empty
 
+L=[1,2,3]
+L.clear()
+print(L)
+
+
+
+###OPERATIONS ON LIST 
+
+##Arithmetic
+
+##Membership
+
+##Loop
 
 
