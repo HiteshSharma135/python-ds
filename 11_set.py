@@ -128,3 +128,95 @@ for i in s1:
 
 
 ###SET FUNCTIONS
+
+##len/sum/min/max/sorted
+s={2,1,5,7,8,9}
+print(len(s))#length of set
+
+print(sum(s))#to find the sum of elements of set
+
+print(min(s))#minimum element
+
+print(max(s))#maximum element
+
+print(sorted(s))#to sort the set in ascending order ,, result will be in list
+
+print(sorted(s,reverse=True))#to sort in descending order
+
+##union/update
+
+#union
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+#s1|s2 is equal to s1.union(s2)
+print(s1.union(s2))
+
+#update
+
+s1.update(s2)#it will union s1 and s2 and store the result in s1
+print(s1)
+print(s2)#s2 remians same
+
+##intersection/intersection_update
+
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+#s1.intersection(s2) is equal to s1&s2
+print(s1.intersection(s2))
+
+s1.intersection_update(s2)#it will store the common elements from s1 and s2 to s1
+print(s1)
+print(s2)#s2 remains same
+
+##difference/difference_update
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+#same with this function like intersection and intersection_update
+
+print(s1.difference(s2))
+
+s1.difference_update(s2)
+print(s1)
+print(s2)
+
+##Symmetric difference/symmetric difference_update
+
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+#same operation with this funciton like difference
+
+print(s1.symmetric_difference(s2))
+
+s1.symmetric_difference_update(s2)
+print(s1)
+print(s2)
+
+##isdisjoint/issubset/issuperset
+
+#isdisjoint
+#this is used to check whether given sets are disjoint(no elements are common) or not 
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+
+print(s1.isdisjoint(s2))#it will show output in boolean
+
+#issubset
+#to check whether a given set is subset of anothet set(give output in boolean)
+
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+print(s1.issubset(s2))
+
+#issuperset
+#to check whether a given set is superset of anothet set(give output in boolean)
+s1={1,2,3,4,5}
+s2={4,5,6,7,8}
+print(s1.issuperset(s2))
+
+###copy
+#it will create a copy of set which is having different address
+s1={1,2,3,4,5}
+s2=s1.copy()
+
+print(s1)
+print(s2)
