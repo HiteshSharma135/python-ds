@@ -220,3 +220,22 @@ s2=s1.copy()
 
 print(s1)
 print(s2)
+
+
+###FROZEN SET(it is immutable version of python set object)
+
+##create frozen set
+fs=frozenset([1,2,3])
+print(fs)
+
+##works->all read function of a set will work on frozenset(union,intersection etc.) which doesn't change the existig set
+##doesn't work->all write operations of a set will not work on frozenset(add,edit,delete etc)as it changes the existing set
+
+##2D frozen set(it is possible as frozen set is immutable)
+fs=frozenset([1,2,3,frozenset([5,6])])
+print(fs)
+
+###SET COMPREHENSION
+
+print({i for i in range(1,11) if i>5})
+
