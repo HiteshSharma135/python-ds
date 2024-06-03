@@ -167,7 +167,19 @@ result = my_function(5, 3)
                
 
 ###WITHOUT RETURN
+#if a function does not have return then python send return statement as none
 
+def is_even(num):
+    if num%2==0:
+        print('even')
+    else:
+        print('odd')
+
+print(is_even(7))#here as there is no return statement so by default return-> none as it displays none ... when we print(is_even(7))
+
+L=[1,2,3,4]
+print(L.append(5))#it will print none as l.append is not list ,,it is returning none value
+print(L)#now it will print the list
 
 ###VARIABLE SCOPE 
 # SEE SESSION 6 OF CAMPUSX FROM 1:01HR
