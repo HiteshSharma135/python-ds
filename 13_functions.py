@@ -167,3 +167,37 @@ result = my_function(5, 3)
                
 
 ###WITHOUT RETURN
+
+
+###VARIABLE SCOPE 
+# SEE SESSION 6 OF CAMPUSX FROM 1:01HR
+
+###NESTED FUNCTIONS
+#use python tutor to see the visualisation of the program
+
+def f():
+    def g():
+        print('inside g')
+    g()
+    print('inside f')
+
+
+f()
+
+#here if we call g() from the main function then it will show error as nested function is hidden from the main function ...as it cannot access the g()
+
+
+##programs of nested function
+
+def g(x):
+    def h():
+        x='abc'
+    x=x+1
+    print('in g(x):x=',x)
+    h()
+    return x
+
+x=3
+z=g(x)
+
+
