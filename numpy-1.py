@@ -188,3 +188,112 @@ np.exp(a1)
 ## round/floor/ceil
 
 np.ceil(np.random.random((2,3))*100)
+
+
+###INDEXING AND SLICING
+
+a1 = np.arange(10)
+a2 = np.arange(12).reshape(3,4)
+a3 = np.arange(8).reshape(2,2,2)
+
+##Indexing(it is the way of accessing the elements of array using index)
+
+#to access 1d array
+a1[2]
+
+#to access 2d array
+a2[1,0]#it takes input as row number and column number which specify the element(indexing starts from 0)
+
+#to access 3d array 
+
+#as we know 3d is combination of 2 2d array so to access the element of 3d array first we need to tell in which 2d array elememt we want ,, after that row number then column number
+
+a3[0,1,2]
+
+
+##Slicing 
+#in indexing we are accessing only one element at a time but with help of slicing we can access multiple elements at a time
+
+#1d array (it is same as we study in string and list)
+
+a1[2:5]#last number not included
+
+a1[2:5:2]#to get the alternate element
+
+a1[2:]#to access every element till last
+
+
+#2d array 
+
+#if we want only first row 
+a2[0,:]#0-> row and :-> all column of first row
+
+#if we want third column
+a2[:,2]#:-> every row of third column ,2-> third column
+
+### for more on slicing concept 
+###Watch session 13 on Numpy fundamentals from campusx 
+
+###Iterating
+
+#loop in 1d
+for i in a1:
+    print(i)
+#it will print all the elements of 1d array 
+
+##loop in 2d 
+
+for i in a2:
+    print(i)
+#it will print the elements in array form 
+
+#loop in 3d
+
+for i in a3:
+    print(i)
+
+#it will print the elements in 2d array format
+
+#if we want to access all the elements of 3d array there is a function nditer
+for i in np.nditer(a3):
+    print(i)
+
+#np.nditer() to access all the elements of 3d array or nd array 
+
+
+###Reshaping
+
+##transpose
+#it change the row -> column and column-> row
+
+np.transpose(a2)
+#second syntax
+a2.T
+
+##ravel(it will transform nd array to 1d array )
+
+a2.ravel()
+
+###Stacking
+#it means to add two array in horizontal or vertical type
+
+##horizontal stacking
+a4=np.arange(12).reshape(3,4)
+a5=np.arange(12,24).reshape(3,4)
+
+#to stack them in horizontal manner
+np.hstack((a4,a5))
+
+##vertical stacking
+np.vsta((a4,a5))
+
+###Splitting
+#it is opposite of stacking
+
+#horizontal splitting
+
+np.hsplit(a4,2)#here 2 specify in how many we want to split the array
+
+##vertical splitting
+
+np.vsplit(a4,4)
