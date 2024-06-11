@@ -1,10 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-
-x=np.linspace(-10,10,100)
-y=x**2
-#plt.plot(x,y)
-#plt.show(block=True)
 
 ###Numpy array vs python list
 
@@ -95,10 +89,13 @@ print(b[~(b%7==0)])
 ###Broadcasting Rules
 #1. Make the two arrays have the same number of dimensions.
 #If the numbers of dimensions of the two arrays are different, add new dimensions with size 1 to the head of the array with the smaller dimension.
+#example:- 1st array =(2,3) 2nd array=3 then add 1 to the head of array then 2nd array =(1,3) same with if 1st array=(5,4,4) and 2nd array=(3) then add 1 to the head of array that is 2nd array=(1,1,3)
 
 #2. Make each dimension of the two arrays the same size.
 
 #If the sizes of each dimension of the two arrays do not match, dimensions with size 1 are stretched to the size of the other array.
+#for ex :- now 1st array is (2,3) and 2nd array is (1,3) now strecth 1 till it match with 1st array that is now 2nd array =(2,3)
+
 #If there is a dimension whose size is not 1 in either of the two arrays, it cannot be broadcasted, and an error is raised
 
 
@@ -110,13 +107,79 @@ print(a+b)#we can add the arrays having same shape
 
 ##different shape
 
+#example:- 1
+
+a = np.arange(12).reshape(4,3)
+b = np.arange(3)
+
+print(a)
+print(b)
+
+print(a+b)
+#it will run as by following the rules addition will be performed
+
+#example:- 2
+a = np.arange(12).reshape(3,4)
+b = np.arange(3)
+
+print(a)
+print(b)
+
+#print(a+b)
+#it will show error
+
+#example:-3
+a = np.arange(3).reshape(1,3)
+b = np.arange(3).reshape(3,1)
+
+print(a)
+print(b)
+
+print(a+b)
+#it will run
 
 
+###WORKING WITH MATHEMATICAL VALUES
+
+##Sigmoid
+
+def sigmoid(array):
+    return 1/(1+ np.exp(-(array)))
+
+a=np.arange(10)
+print(sigmoid(a))
+
+##Mean squared error
+
+actual =np.random.randint(1,50,25)
+predicted=np.random.randint(1,50,25)
+
+def mse(actual,predicted):
+    return np.mean((actual-predicted)**2)
+
+print(mse(actual,predicted))
 
 
+##Binary  cross entropy
 
 
+###MISSING VALUES
 
+#creating an array having missing value
+a=np.array[1,2,3,4,np.nan,6]
+
+#here np.nan is a missing value
+#removing missing value
+
+print(a[~np.isnan(a)])#it asking every item that it is nan or not and returning boolean values
+
+###PLOTTING GRAPH
+import matplotlib.pyplot as plt
+
+x=np.linspace(-10,10,100)
+y=x**2#here we can use any function to create 2d graph
+#plt.plot(x,y)
+#plt.show(block=True)
 
 
 
