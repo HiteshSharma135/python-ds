@@ -199,3 +199,4 @@ print(np.in1d(m,1))
 print(np.clip(a,a_min=25,a_max=75))#it gives number in range of 25 and 75
 
 
+vjhbjh
